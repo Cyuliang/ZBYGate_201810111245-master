@@ -280,7 +280,9 @@
     <None Include="Log\Log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -295,11 +297,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Release\SysSetup.ini" />
-    <None Include="Release\ZBYGate Data Collection.exe.config" />
-    <None Include="Release\ZBYGate Data Collection.exe.lastcodeanalysissucceeded" />
-    <None Include="Release\ZBYGate Data Collection.vshost.exe.config" />
-    <None Include="Release\ZBYGate Data Collection.vshost.exe.manifest" />
+    <None Include="Release_x86\SysSetup.ini" />
+    <None Include="Release_x86\ZBYGate_Data_Collection.exe.config" />
+    <None Include="Release_x86\ZBYGate_Data_Collection.exe.lastcodeanalysissucceeded" />
     <None Include="SysSetup.ini" />
   </ItemGroup>
   <ItemGroup>
@@ -377,50 +377,31 @@
     <None Include="Resources\集装箱彩色.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AxInterop.VeconclientProj.dll" />
-    <Content Include="borlndmm.dll" />
-    <Content Include="Google.Protobuf.dll" />
-    <Content Include="Interop.VeconclientProj.dll" />
-    <Content Include="LedDynamicArea.dll" />
-    <Content Include="log4net.dll" />
-    <Content Include="MySql.Data.dll" />
-    <Content Include="MySql.Web.dll" />
-    <Content Include="n3kAdrtB.dll" />
-    <Content Include="Newtonsoft.Json.dll" />
-    <Content Include="Release\AxInterop.VeconclientProj.dll" />
-    <Content Include="Release\borlndmm.dll" />
-    <Content Include="Release\COM.DLL" />
-    <Content Include="Release\Google.Protobuf.dll" />
-    <Content Include="Release\Interop.VeconclientProj.dll" />
-    <Content Include="Release\LedDynamicArea.dll" />
-    <Content Include="Release\log4net.dll" />
-    <Content Include="Release\MSComDlg.dll" />
-    <Content Include="Release\MySql.Data.dll" />
-    <Content Include="Release\MySql.Web.dll" />
-    <Content Include="Release\n3kAdrtB.dll" />
-    <Content Include="Release\Newtonsoft.Json.dll" />
-    <Content Include="Release\Newtonsoft.Json.xml" />
-    <Content Include="Release\OCX.DLL" />
-    <Content Include="Release\sdtapi.dll" />
-    <Content Include="Release\stdole.dll" />
-    <Content Include="Release\Termb.dll" />
-    <Content Include="Release\TransNet.dll" />
-    <Content Include="Release\VeconclientProj.dll" />
-    <Content Include="Release\WltRS.dll" />
-    <Content Include="Release\WTY.dll" />
-    <Content Include="Release\ZBYGate Data Collection.exe" />
-    <Content Include="Release\ZBYGate Data Collection.exe.CodeAnalysisLog.xml" />
-    <Content Include="Release\ZBYGate Data Collection.pdb" />
-    <Content Include="Release\ZBYGate Data Collection.vshost.exe" />
-    <Content Include="sdtapi.dll" />
-    <Content Include="Termb.dll" />
-    <Content Include="TransNet.dll" />
-    <Content Include="WltRS.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="WTY.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Release_x86\AxInterop.VeconclientProj.dll" />
+    <Content Include="Release_x86\borlndmm.dll" />
+    <Content Include="Release_x86\COM.DLL" />
+    <Content Include="Release_x86\Google.Protobuf.dll" />
+    <Content Include="Release_x86\Interop.VeconclientProj.dll" />
+    <Content Include="Release_x86\LedDynamicArea.dll" />
+    <Content Include="Release_x86\log4net.dll" />
+    <Content Include="Release_x86\MSComDlg.dll" />
+    <Content Include="Release_x86\MySql.Data.dll" />
+    <Content Include="Release_x86\MySql.Web.dll" />
+    <Content Include="Release_x86\n3kAdrtB.dll" />
+    <Content Include="Release_x86\Newtonsoft.Json.dll" />
+    <Content Include="Release_x86\Newtonsoft.Json.xml" />
+    <Content Include="Release_x86\OCX.DLL" />
+    <Content Include="Release_x86\sdtapi.dll" />
+    <Content Include="Release_x86\stdole.dll" />
+    <Content Include="Release_x86\Termb.dll" />
+    <Content Include="Release_x86\TransNet.dll" />
+    <Content Include="Release_x86\VeconclientProj.dll" />
+    <Content Include="Release_x86\WltRS.dll" />
+    <Content Include="Release_x86\WTY.dll" />
+    <Content Include="Release_x86\WT_H264.dll" />
+    <Content Include="Release_x86\ZBYGate_Data_Collection.exe" />
+    <Content Include="Release_x86\ZBYGate_Data_Collection.exe.CodeAnalysisLog.xml" />
+    <Content Include="Release_x86\ZBYGate_Data_Collection.pdb" />
     <Content Include="ZBYGate Data Collection.exe" />
     <None Include="Resources\身份证.png" />
     <None Include="Resources\初始化.png" />

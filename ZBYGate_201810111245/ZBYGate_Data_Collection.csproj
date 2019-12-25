@@ -415,7 +415,9 @@
     <Content Include="sdtapi.dll" />
     <Content Include="Termb.dll" />
     <Content Include="TransNet.dll" />
-    <Content Include="WltRS.dll" />
+    <Content Include="WltRS.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="WTY.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

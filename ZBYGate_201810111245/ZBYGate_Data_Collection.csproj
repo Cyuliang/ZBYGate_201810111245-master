@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94F86C57-54BD-48E1-AA9F-C737E7289D84}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ZBYGate_Data_Collection</RootNamespace>
+    <AssemblyName>ZBYGate_Data_Collection</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <WarningLevel>0</WarningLevel>
+    <Optimize>true</Optimize>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Zby.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>IEDataBase\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>LocalDataBase\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>LocalDataBase\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="n3kAdrtB">
+      <HintPath>Gate\n3kAdrtB.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OCX">
+      <HintPath>..\..\..\..\..\Desktop\OCX\2014\vecon生成的dll\OCX.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Container\Container.cs" />
+    <Compile Include="Container\ContainerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Container\ContainerWindow.Designer.cs">
+      <DependentUpon>ContainerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateData.Designer.cs">
+      <DependentUpon>CreateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CVR\CVR.cs" />
+    <Compile Include="CVR\CVRSDK.cs" />
+    <Compile Include="CVR\CVRWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CVR\CVRWindow.Designer.cs">
+      <DependentUpon>CVRWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gate\DoorStateEventArgs.cs" />
+    <Compile Include="Gate\Gate.cs" />
+    <Compile Include="Gate\GateWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gate\GateWindow.Designer.cs">
+      <DependentUpon>GateWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Https\CHttp.cs" />
+    <Compile Include="Https\HttpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Https\HttpWindow.Designer.cs">
+      <DependentUpon>HttpWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEDataBase\InDataWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IEDataBase\InDataWindow.Designer.cs">
+      <DependentUpon>InDataWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEDataBase\OutDataWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IEDataBase\OutDataWindow.Designer.cs">
+      <DependentUpon>OutDataWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEDataBase\RunData.cs" />
+    <Compile Include="IEDataBase\StatisticsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IEDataBase\StatisticsWindow.Designer.cs">
+      <DependentUpon>StatisticsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LED\LED.cs" />
+    <Compile Include="LED\LEDWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LED\LEDWindow.Designer.cs">
+      <DependentUpon>LEDWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LED\SafeNativeMethods.cs" />
+    <Compile Include="LocalDataBase\ItemDataWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDataBase\ItemDataWindow.Designer.cs">
+      <DependentUpon>ItemDataWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDataBase\LocalDataBase.cs" />
+    <Compile Include="LocalDataBase\LocalDataBaseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalDataBase\LocalDataBaseWindow.Designer.cs">
+      <DependentUpon>LocalDataBaseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalDataBase\MySqlHelper.cs" />
+    <Compile Include="Log\CLog.cs" />
+    <Compile Include="PasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordForm.Designer.cs">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plate\NativeMethods.cs" />
+    <Compile Include="Plate\Plate.cs" />
+    <Compile Include="Plate\PlateWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plate\PlateWindow.Designer.cs">
+      <DependentUpon>PlateWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Working.cs" />
+    <EmbeddedResource Include="Container\ContainerWindow.resx">
+      <DependentUpon>ContainerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateData.resx">
+      <DependentUpon>CreateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CVR\CVRWindow.resx">
+      <DependentUpon>CVRWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gate\GateWindow.resx">
+      <DependentUpon>GateWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Https\HttpWindow.resx">
+      <DependentUpon>HttpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IEDataBase\InDataWindow.resx">
+      <DependentUpon>InDataWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IEDataBase\OutDataWindow.resx">
+      <DependentUpon>OutDataWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IEDataBase\StatisticsWindow.resx">
+      <DependentUpon>StatisticsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LED\LEDWindow.resx">
+      <DependentUpon>LEDWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDataBase\ItemDataWindow.resx">
+      <DependentUpon>ItemDataWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalDataBase\LocalDataBaseWindow.resx">
+      <DependentUpon>LocalDataBaseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordForm.resx">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plate\PlateWindow.resx">
+      <DependentUpon>PlateWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Log\Log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Release\SysSetup.ini" />
+    <None Include="Release\ZBYGate Data Collection.exe.config" />
+    <None Include="Release\ZBYGate Data Collection.exe.lastcodeanalysissucceeded" />
+    <None Include="Release\ZBYGate Data Collection.vshost.exe.config" />
+    <None Include="Release\ZBYGate Data Collection.vshost.exe.manifest" />
+    <None Include="SysSetup.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lingk1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\链接 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\断开链接 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lastR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\集装箱进口状态.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\断开链接 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\抓拍相机.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\开关.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\数据.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\搜索.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关闭视频.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\视频.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\目录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\车牌.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\集装箱彩色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxInterop.VeconclientProj.dll" />
+    <Content Include="borlndmm.dll" />
+    <Content Include="Google.Protobuf.dll" />
+    <Content Include="Interop.VeconclientProj.dll" />
+    <Content Include="LedDynamicArea.dll" />
+    <Content Include="log4net.dll" />
+    <Content Include="MySql.Data.dll" />
+    <Content Include="MySql.Web.dll" />
+    <Content Include="n3kAdrtB.dll" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <Content Include="Release\AxInterop.VeconclientProj.dll" />
+    <Content Include="Release\borlndmm.dll" />
+    <Content Include="Release\COM.DLL" />
+    <Content Include="Release\Google.Protobuf.dll" />
+    <Content Include="Release\Interop.VeconclientProj.dll" />
+    <Content Include="Release\LedDynamicArea.dll" />
+    <Content Include="Release\log4net.dll" />
+    <Content Include="Release\MSComDlg.dll" />
+    <Content Include="Release\MySql.Data.dll" />
+    <Content Include="Release\MySql.Web.dll" />
+    <Content Include="Release\n3kAdrtB.dll" />
+    <Content Include="Release\Newtonsoft.Json.dll" />
+    <Content Include="Release\Newtonsoft.Json.xml" />
+    <Content Include="Release\OCX.DLL" />
+    <Content Include="Release\sdtapi.dll" />
+    <Content Include="Release\stdole.dll" />
+    <Content Include="Release\Termb.dll" />
+    <Content Include="Release\TransNet.dll" />
+    <Content Include="Release\VeconclientProj.dll" />
+    <Content Include="Release\WltRS.dll" />
+    <Content Include="Release\WTY.dll" />
+    <Content Include="Release\ZBYGate Data Collection.exe" />
+    <Content Include="Release\ZBYGate Data Collection.exe.CodeAnalysisLog.xml" />
+    <Content Include="Release\ZBYGate Data Collection.pdb" />
+    <Content Include="Release\ZBYGate Data Collection.vshost.exe" />
+    <Content Include="sdtapi.dll" />
+    <Content Include="Termb.dll" />
+    <Content Include="TransNet.dll" />
+    <Content Include="WltRS.dll" />
+    <Content Include="WTY.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ZBYGate Data Collection.exe" />
+    <None Include="Resources\身份证.png" />
+    <None Include="Resources\初始化.png" />
+    <None Include="Resources\读取.png" />
+    <None Include="Resources\关 闭.png" />
+    <None Include="Resources\循环.png" />
+    <None Include="Resources\开门 %281%29.png" />
+    <None Include="Resources\开门.png" />
+    <None Include="Resources\道闸02.png" />
+    <None Include="Resources\led.png" />
+    <None Include="Resources\屏幕.png" />
+    <None Include="Resources\发送.png" />
+    <None Include="Resources\区域.png" />
+    <None Include="Resources\释放.png" />
+    <None Include="Resources\文本.png" />
+    <None Include="Resources\定时.png" />
+    <None Include="Resources\集装箱.png" />
+    <None Include="Resources\车牌 %281%29.png" />
+    <None Include="Resources\车牌 %282%29.png" />
+    <None Include="Resources\打印机.png" />
+    <None Include="Resources\扫描仪.png" />
+    <None Include="Resources\保存.png" />
+    <None Include="Resources\删除筛选项.png" />
+    <None Include="Resources\添加.png" />
+    <None Include="Resources\添加 %281%29.png" />
+    <None Include="Resources\编辑.png" />
+    <None Include="Resources\测试.png" />
+    <Content Include="Newtonsoft.Json.xml" />
+    <Content Include="VeconClientProj.ocx" />
+    <Content Include="Zby.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
